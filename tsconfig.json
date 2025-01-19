@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
-		"declaration":  true,
+		"declaration": true,
 		"emitDeclarationOnly": true,
 		"declarationDir": "types"
 	},

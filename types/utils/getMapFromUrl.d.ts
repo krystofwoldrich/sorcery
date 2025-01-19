@@ -8,4 +8,8 @@
    return the sourcemap
  * @returns {object} - a version 3 sourcemap
  */
-export default function getMapFromUrl(url: string, base: string, sync: boolean): object;
+export default function getMapFromUrl(
+	url: string,
+	base: string,
+	sync: boolean
+): object;
