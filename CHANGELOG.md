@@ -1,5 +1,10 @@
 # changelog
 
+## 1.1.0
+
+- Fix help and version commands ([b4a9dea](https://github.com/krystofwoldrich/sorcery/commit/b4a9dea22c7d57270b3604c20add748cfe600125))
+- Skip source maps files which can't be read ([115b1d9](https://github.com/krystofwoldrich/sorcery/commit/115b1d9b83b4582398528b6a4988d4581a7784a4))
+
 ## 1.0.0
 
 - Modernise package ([#191](https://github.com/Rich-Harris/sorcery/pull/191))
