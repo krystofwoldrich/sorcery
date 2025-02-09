@@ -1,7 +1,7 @@
 {
 	"name": "@krystofs/sorcery",
 	"description": "Resolve a chain of sourcemaps back to the original source",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"author": "Krystof Woldrich",
 	"repository": "https://github.com/krystofwoldrich/sorcery",
 	"type": "module",
