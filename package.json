@@ -1,5 +1,5 @@
 {
-	"name": "sorcery",
+	"name": "@krystof/sorcery",
 	"description": "Resolve a chain of sourcemaps back to the original source",
 	"version": "1.0.0",
 	"author": "Rich Harris",
