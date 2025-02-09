@@ -1,26 +1,29 @@
 export default class Node {
-	/**
-	 * @param {{
-	 *   file?: string;
-	 *   content?: string;
-	 * }} opts
-	 */
-	constructor({ file, content }: { file?: string; content?: string });
-	file: string;
-	content: string;
-	map: any;
-	mappings: import('@jridgewell/sourcemap-codec').SourceMapMappings;
-	sources: any;
-	isOriginalSource: boolean;
-	_stats: {
-		decodingTime: number;
-		encodingTime: number;
-		tracingTime: number;
-		untraceable: number;
-	};
-	load(sourcesContentByPath: any, sourceMapByPath: any): Promise<any>;
-	loadSync(sourcesContentByPath: any, sourceMapByPath: any): void;
-	/**
+    /**
+     * @param {{
+     *   file?: string;
+     *   content?: string;
+     * }} opts
+     */
+    constructor({ file, content }: {
+        file?: string;
+        content?: string;
+    });
+    file: string;
+    content: string;
+    map: any;
+    mappings: import("@jridgewell/sourcemap-codec").SourceMapMappings;
+    sources: any;
+    isOriginalSource: boolean;
+    _stats: {
+        decodingTime: number;
+        encodingTime: number;
+        tracingTime: number;
+        untraceable: number;
+    };
+    load(sourcesContentByPath: any, sourceMapByPath: any): Promise<any>;
+    loadSync(sourcesContentByPath: any, sourceMapByPath: any): void;
+    /**
      * Traces a segment back to its origin
      * @param {number} lineIndex - the zero-based line index of the
        segment as found in `this`
@@ -35,5 +38,5 @@ export default class Node {
          @property {string | null} name - the name corresponding
          to the segment being traced
      */
-	trace(lineIndex: number, columnIndex: number, name: string | null): object;
+    trace(lineIndex: number, columnIndex: number, name: string | null): object;
 }
