@@ -1,5 +1,11 @@
 # sorcery.js
 
+## Fork disclaimer
+
+This is a fork of [sorcery](https://github.com/Rich-Harris/sorcery) including some quality of life improvements which might or might not be ever merged to the original project.
+
+## Original description
+
 Sourcemaps are great - if you have a JavaScript file, and you minify it, your minifier can generate a map that lets you debug as though you were looking at the original uncompressed code.
 
 But if you have more than one transformation - say you want to transpile your JavaScript, concatenate several files into one, and minify the result - it gets a little trickier. Each intermediate step needs to be able to both _ingest_ a sourcemap and _generate_ one, all the time pointing back to the original source.
