@@ -1,7 +1,7 @@
 {
 	"name": "@krystof/sorcery",
 	"description": "Resolve a chain of sourcemaps back to the original source",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "Rich Harris",
 	"repository": "https://github.com/Rich-Harris/sorcery",
 	"type": "module",
@@ -43,9 +43,9 @@
 		"bin/",
 		"README.md"
 	],
-  "engines": {
-    "node": "22.8.0",
-    "pnpm": "9.15.4"
-  },
+	"engines": {
+		"node": "22.8.0",
+		"pnpm": "9.15.4"
+	},
 	"packageManager": "pnpm@9.15.4"
 }
