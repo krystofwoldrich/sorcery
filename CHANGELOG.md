@@ -1,5 +1,9 @@
 # changelog
 
+## 1.1.2
+
+- Fix binary name to match the package name
+
 ## 1.1.1
 
 - Fix package metadata
