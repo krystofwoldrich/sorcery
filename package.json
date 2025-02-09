@@ -2,8 +2,8 @@
 	"name": "@krystofs/sorcery",
 	"description": "Resolve a chain of sourcemaps back to the original source",
 	"version": "1.1.0",
-	"author": "Rich Harris",
-	"repository": "https://github.com/Rich-Harris/sorcery",
+	"author": "Krystof Woldrich",
+	"repository": "https://github.com/krystofwoldrich/sorcery",
 	"type": "module",
 	"exports": {
 		".": {
