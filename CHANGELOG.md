@@ -1,5 +1,9 @@
 # changelog
 
+## 1.1.1
+
+- Fix package metadata
+
 ## 1.1.0
 
 - Fix help and version commands ([b4a9dea](https://github.com/krystofwoldrich/sorcery/commit/b4a9dea22c7d57270b3604c20add748cfe600125))
