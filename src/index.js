@@ -1,6 +1,29 @@
 import { resolve } from 'node:path';
 import Node from './Node.js';
 import Chain from './Chain.js';
+import { generateId } from './utils/generateId.js';
+
+/**
+ * @param {string} source e.g. content of bundle.js
+ * @param {string} map e.g. content of bundle.js.map
+ * @returns
+ */
+export async function loadFrom(source, map) {
+  const sourceId = generateId() + '.js';
+
+  const sourceNode = new Node({ file: sourceId });
+  const mapObject = JSON.parse(map);
+
+  const sourcesContentByPath = {
+    [resolve(sourceId)]: source,
+  };
+  const sourceMapByPath = {
+    [resolve(sourceId)]: mapObject,
+  };
+
+  await sourceNode.load(sourcesContentByPath, sourceMapByPath);
+  return sourceNode.isOriginalSource ? null : new Chain(sourceNode, sourcesContentByPath)
+}
 
 /**
  * @param {string} file

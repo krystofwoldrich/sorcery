@@ -16,6 +16,40 @@ process.chdir(dirname);
 beforeEach(() => rimraf.sync('.tmp'));
 afterEach(() => rimraf.sync('.tmp'));
 
+describe('sorcery.loadFrom()', () => {
+  it('calls sorcery.load with custom content', () => {
+    return sorcery
+    .loadFrom(`(function() {
+var answer;
+
+answer = 40 + 2;
+
+console.log("the answer is " + answer);
+
+}).call(this);`,
+        JSON.stringify({
+          version: 3,
+          sources: ['samples/9/example.coffee'],
+          sourcesContent: [null],
+          names: [],
+          mappings:
+            'AAAA;AAAA,MAAA,MAAA;;AAAA,EAAA,MAAA,GAAS,EAAA,GAAK,CAAd,CAAA;;AAAA,EACA,OAAO,CAAC,GAAR,CAAa,gBAAA,GAAe,MAA5B,CADA,CAAA;AAAA'
+        })
+    ).then((chain) => {
+      const actual = chain.trace(6, 10);
+
+      const expected = {
+        source: path.resolve('samples/9/example.coffee'),
+        line: 2,
+        column: 8,
+        name: null
+      };
+
+      assert.deepEqual(actual, expected);
+    });
+  });
+})
+
 describe('sorcery.load()', () => {
 	it('resolves to null if target has no sourcemap', () => {
 		return sorcery.load('samples/1/src/helloworld.coffee').then((chain) => {
