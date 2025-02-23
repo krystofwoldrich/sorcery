@@ -3,6 +3,11 @@ import Node from './Node.js';
 import Chain from './Chain.js';
 import { generateId } from './utils/generateId.js';
 
+export async function withSorcery(config) {
+  // TODO: add the plugin
+  return config;
+}
+
 /**
  * @param {string} source e.g. content of bundle.js
  * @param {string} map e.g. content of bundle.js.map
